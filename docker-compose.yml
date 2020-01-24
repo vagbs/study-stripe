@@ -1,0 +1,10 @@
+version: '2'
+services:
+  stripe:
+    build: .
+    ports:
+      - "443:443"
+      - "3000:3000"
+    environment:
+    - PUBLISHABLE_KEY=${PUBLISHABLE_KEY}
+    - SECRET_KEY=${SECRET_KEY}
